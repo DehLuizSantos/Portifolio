@@ -6,19 +6,21 @@ import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
 import Footer from "./template/Footer";
 import Header from "./template/Header";
 
+import Home from "./pages/Home";
+
 function App() {
   return (
     <>
       <GlobalStyles />
       <Router>
         <ThemeProvider theme={theme}>
+          <Header />
           <Switch>
-            <Header />
             <Container>
-              <Route path="/Home" component={Header} />
+              <Route path="/Home" component={Home} />
             </Container>
-            <Footer />
           </Switch>
+          <Footer />
         </ThemeProvider>
       </Router>
     </>

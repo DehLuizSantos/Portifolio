@@ -21,9 +21,10 @@ export default {
     xxs: "90vw",
   },
   colors: {
-    primary: "#15F84E",
-    gray: "#6E49D8",
-    background: "#656565",
+    primary: "#BA04FA",
+    secundary: "#6E49D8",
+    tertiary: "#15F84E",
+    background: "#0E0E0E",
     Foreground: "#2E2C2C",
     title: "#CDCDBC",
     text: "#838377",
