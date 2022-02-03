@@ -11,7 +11,6 @@ export const ContainerNavbar = styled.header`
     display: flex;
     padding: 0 10vw;
     align-items: center;
-    justify-content: space-between;
 
     .logo {
       display: flex;
@@ -28,9 +27,12 @@ export const ContainerNavbar = styled.header`
           display: inline;
           margin: 10px;
           color: ${theme.colors.primary};
-          font-size: 25px;
+          font-size: 17px;
           font-weight: 500;
           padding: 5px;
+        }
+        @media (min-width: ${theme.screen.lg}px) {
+          font-size: 22px;
         }
         &:hover {
           border-bottom: 3px solid ${theme.colors.primary};
@@ -42,7 +44,7 @@ export const ContainerNavbar = styled.header`
 
 export const MenuHamburguer = styled.div<NavbarProps>`
   ${({ theme, openMenu }) => css`
-    margin-left: 100px;
+    margin-left: auto;
     button {
       @media (min-width: ${theme.screen.md}px) {
         display: none;
@@ -52,7 +54,7 @@ export const MenuHamburguer = styled.div<NavbarProps>`
       transition: all ease-in 0.3s;
       padding: ${openMenu ? "15px" : "0 15px"};
       max-height: ${openMenu ? "100%" : "0"};
-      opacity: ${openMenu ? "1" : "0"};
+      z-index: ${openMenu ? "1" : "-1"};
 
       position: absolute;
       top: 100px;

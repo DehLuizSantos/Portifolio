@@ -10,36 +10,51 @@ const Footer: React.FC = () => {
     <S.FooterWrapper>
       <img src={Logo} alt="Logo" />
       <h2>Working with talent and help people to sucess is my passion;</h2>
-      <div className="footer-infos">
-        <div className="social-media">
-          <h3>Social</h3>
-          <div className="divider" />
-          <div className="social-media-wrapper">
-            <div className="social-media-icon">
+
+      <S.SocialMediaWrapper>
+        <div className="social-media-wrapper">
+          <div className="social-media">
+            <h3>Social</h3>
+            <div className="divider" />
+            <a
+              href="https://api.whatsapp.com/send?phone=5511979539358&text=Olá!."
+              target={"_blank"}
+              rel="noreferrer"
+            >
               <img src={whatsapp} alt="Whatsapp" />
-            </div>
-            <div className="social-media-icon">
+            </a>
+
+            <a
+              href="https://github.com/DehLuizSantos"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img src={linkdn} alt="Linkdn" />
-            </div>
-            <div className="social-media-icon">
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/andr%C3%A9-luiz-844207102/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img src={github} alt="GitHub" />
-            </div>
+            </a>
+          </div>
+
+          <div className="social-media">
+            <h3>Contact</h3>
+            <div className="divider" />
+            <p>+55(11)9907-9358</p>
+            <p>and_consul@outlook.com</p>
+          </div>
+
+          <div className="social-media">
+            <h3>Addresses</h3>
+            <div className="divider" />
+            <p>São Paulo | SP</p>
           </div>
         </div>
-
-        <div className="social-media">
-          <h3>Contact</h3>
-          <div className="divider" />
-          <p>+55(11)9907-9358</p>
-          <p>and_consul@outlook.com</p>
-        </div>
-
-        <div className="social-media">
-          <h3>Addresses</h3>
-          <div className="divider" />
-          <p>São Paulo | SP</p>
-        </div>
-      </div>
+      </S.SocialMediaWrapper>
     </S.FooterWrapper>
   );
 };

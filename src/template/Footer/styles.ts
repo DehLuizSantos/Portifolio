@@ -23,32 +23,51 @@ export const FooterWrapper = styled.div`
       color: ${theme.colors.text};
       justify-content: center;
     }
-    .social-media {
-      margin: 10px 10px;
+  `}
+`;
 
-      h3 {
-        font-size: 16px;
-        color: ${theme.colors.title};
-        margin-left: 5px;
-      }
-      .divider {
-        height: 2px;
-        background-color: ${theme.colors.tertiary};
-        width: 90px;
-        margin: 2px auto 10px auto;
-      }
-      p {
-        color: ${theme.colors.title};
-        font-size: 10px;
-        font-weight: bold;
-      }
-      .social-media-wrapper {
-        display: flex;
-        .social-media-icon {
-          border-radius: 50%;
-          margin-left: 8px;
-          width: 30px;
-          height: 30px;
+export const SocialMediaWrapper = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    .social-media-wrapper {
+      display: flex;
+      .social-media {
+        margin: 10px 10px;
+
+        h3 {
+          font-size: 16px;
+          color: ${theme.colors.title};
+          margin-left: 5px;
+          @media (min-width: ${theme.screen.md}px) {
+            font-size: 21px;
+          }
+        }
+        .divider {
+          height: 2px;
+          background-color: ${theme.colors.tertiary};
+          width: 90px;
+          margin: 2px auto 10px auto;
+          @media (min-width: ${theme.screen.md}px) {
+            width: 110px;
+          }
+        }
+        p {
+          color: ${theme.colors.title};
+          font-size: 10px;
+          font-weight: bold;
+          @media (min-width: ${theme.screen.md}px) {
+            font-size: 13px;
+          }
+        }
+        a {
+          margin: 2px;
+        }
+        img {
+          @media (min-width: ${theme.screen.md}px) {
+            width: 40px;
+          }
         }
       }
     }
