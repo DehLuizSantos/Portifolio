@@ -3,13 +3,25 @@ import "styled-components";
 declare module "styled-components" {
   export interface DefaultTheme {
     colors: {
-      primary: string;
-      secundary: string;
-      tertiary: string;
-      background: string;
-      Foreground: string;
-      title: string;
-      text: string;
+      backgroundcolor: string;
+      lightWhite: string;
+      colorblack: string;
+      colorlightBlack: string;
+      colorwhite: string;
+      colorpurple: string;
+      colorpurpleLight: string;
+      colorpurpleUltraLight: string;
+      colorred: string;
+      colorlightRed: string;
+      colorgreen: string;
+      colorlightGreen: string;
+      coloryellow: string;
+      colorlightYellow: string;
+      colororange: string;
+      colormagenta: string;
+      colorlightMagenta: string;
+      colorblue: string;
+      colordarkBlue: string;
     };
     screen: {
       sl: number;

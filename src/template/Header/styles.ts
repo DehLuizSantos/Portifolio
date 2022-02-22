@@ -4,39 +4,29 @@ type NavbarProps = {
   openMenu: boolean;
 };
 
-export const ContainerNavbar = styled.header`
-  ${({ theme }) => css`
-    background-color: ${theme.colors.Foreground};
-    height: 100px;
-    display: flex;
+export const ContainerNavbar = styled.header<NavbarProps>`
+  ${({ openMenu }) => css`
+    backdrop-filter: blur(3px);
+    background: rgba(255, 255, 255, 0.2);
+    height: ${openMenu ? "250px" : "90px"};
+    transition: all ease-in 0.1s;
+    width: 100%;
     padding: 0 10vw;
-    align-items: center;
-
+    display: flex;
+    position: fixed;
+    right: 0;
+    padding-bottom: 10px;
+    align-items: ${openMenu ? "end" : "center;"};
+    padding-top: ${openMenu ? "50px" : "0"};
     .logo {
-      display: flex;
-      align-items: center;
-      p {
-        margin-left: 15px;
-        color: ${theme.colors.text};
-      }
-    }
-    .navbar {
-      a {
-        display: none;
-        @media (min-width: ${theme.screen.md}px) {
-          display: inline;
-          margin: 10px;
-          color: ${theme.colors.primary};
-          font-size: 17px;
-          font-weight: 500;
-          padding: 5px;
-        }
-        @media (min-width: ${theme.screen.lg}px) {
-          font-size: 22px;
-        }
-        &:hover {
-          border-bottom: 3px solid ${theme.colors.primary};
-        }
+      background-color: #fff;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: ${openMenu ? "none" : "block"};
+      img {
+        width: 50px;
+        height: 50px;
       }
     }
   `}
@@ -44,30 +34,35 @@ export const ContainerNavbar = styled.header`
 
 export const MenuHamburguer = styled.div<NavbarProps>`
   ${({ theme, openMenu }) => css`
+    text-align: end;
     margin-left: auto;
+    display: block;
+    @media (min-width: ${theme.screen.md}px) {
+      margin-left: 10px;
+    }
     button {
       @media (min-width: ${theme.screen.md}px) {
         display: none;
       }
     }
-    .open-menu {
-      transition: all ease-in 0.3s;
-      padding: ${openMenu ? "15px" : "0 15px"};
-      max-height: ${openMenu ? "100%" : "0"};
-      z-index: ${openMenu ? "1" : "-1"};
 
-      position: absolute;
-      top: 100px;
-      right: 0;
-      width: 100%;
-      height: 270px;
-      background-color: ${theme.colors.Foreground};
-      a {
+    .menu {
+      display: ${openMenu ? "block" : "none"};
+      @media (min-width: ${theme.screen.md}px) {
         display: block;
-        text-align: center;
-        margin: 20px;
-        font-size: 25px;
-        color: ${theme.colors.primary};
+      }
+      ul {
+        display: ${openMenu ? "block" : "flex"};
+        list-style: none;
+        width: ${openMenu ? "100%" : "50px"};
+        li {
+          margin-top: ${openMenu ? "20px" : "0"};
+          margin-left: 40px;
+          color: ${theme.colors.lightWhite};
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 26px;
+        }
       }
     }
   `}

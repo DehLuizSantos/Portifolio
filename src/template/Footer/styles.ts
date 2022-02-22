@@ -2,17 +2,16 @@ import styled, { css } from "styled-components";
 
 export const FooterWrapper = styled.div`
   ${({ theme }) => css`
-    background-color: ${theme.colors.Foreground};
+    background-color: ${theme.colors.backgroundcolor};
     width: 100%;
     height: 300px;
-    margin: 20px 0;
     padding: 40px;
     text-align: center;
     h2 {
       font-size: 12px;
       margin-top: 10px;
       font-weight: bold;
-      color: ${theme.colors.title};
+      color: ${theme.colors.colorgreen};
       @media (min-width: ${theme.screen.md}px) {
         font-size: 22px;
       }
@@ -20,7 +19,7 @@ export const FooterWrapper = styled.div`
     .footer-infos {
       display: flex;
       margin: 20px;
-      color: ${theme.colors.text};
+      color: ${theme.colors.lightWhite};
       justify-content: center;
     }
   `}
@@ -38,7 +37,7 @@ export const SocialMediaWrapper = styled.div`
 
         h3 {
           font-size: 16px;
-          color: ${theme.colors.title};
+          color: ${theme.colors.lightWhite};
           margin-left: 5px;
           @media (min-width: ${theme.screen.md}px) {
             font-size: 21px;
@@ -46,7 +45,7 @@ export const SocialMediaWrapper = styled.div`
         }
         .divider {
           height: 2px;
-          background-color: ${theme.colors.tertiary};
+          background-color: ${theme.colors.colorlightYellow};
           width: 90px;
           margin: 2px auto 10px auto;
           @media (min-width: ${theme.screen.md}px) {
@@ -54,7 +53,7 @@ export const SocialMediaWrapper = styled.div`
           }
         }
         p {
-          color: ${theme.colors.title};
+          color: ${theme.colors.colorblue};
           font-size: 10px;
           font-weight: bold;
           @media (min-width: ${theme.screen.md}px) {
