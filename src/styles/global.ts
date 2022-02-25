@@ -26,6 +26,7 @@ const GlobalStyles: GlobalStyleComponent<
       outline: 0;
       border: 0;
       box-sizing: border-box;
+      font-family: 'Fira Code', monospace;
     }
 
   

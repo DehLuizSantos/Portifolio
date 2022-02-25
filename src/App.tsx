@@ -5,6 +5,7 @@ import GlobalStyles from "./styles/global";
 
 import Header from "./template/Header";
 import Home from "./pages/Home";
+import About from "./pages/About";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Container>
           <Header />
           <Home />
+          <About />
         </Container>
       </ThemeProvider>
     </>
