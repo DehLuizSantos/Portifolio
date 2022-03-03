@@ -42,36 +42,38 @@ const About: React.FC = () => {
   return (
     <S.ContainerAbout>
       <Title title="About-me" />
-      <S.SocialMedia>
-        <img src={Profile} alt="" />
-        <div className="social-media">
-          <a href="https://github.com/DehLuizSantos">
-            <img src={GitHub} alt="Github" />
-          </a>
-          <a href="https://www.facebook.com/profile.php?id=100002153487792">
-            <img src={Facebook} alt="Facebook" />
-          </a>
-          <a href="https://www.linkedin.com/in/andr%C3%A9-luiz-844207102/">
-            <img src={Linkdn} alt="Linkdn" />
-          </a>
-          <a href="whatsapp://send?text=Ola'">
-            <img src={Whatsapp} alt="Whatsapp" />
-          </a>
-        </div>
-      </S.SocialMedia>
-
-      <S.ProfileInfos>
-        <span className="purple">&#123;</span>
-        {profileInfoArray.map((info, index) => (
-          <div key={index} className="info">
-            <span className="magento">{info.info}</span>
-            <span className="magento-light">:</span>
-            <span className="orange">{info.value}</span>
-            <span className="blue">,</span>
+      <div className="position-desktop">
+        <S.SocialMedia>
+          <img src={Profile} alt="" />
+          <div className="social-media">
+            <a href="https://github.com/DehLuizSantos">
+              <img src={GitHub} alt="Github" />
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100002153487792">
+              <img src={Facebook} alt="Facebook" />
+            </a>
+            <a href="https://www.linkedin.com/in/andr%C3%A9-luiz-844207102/">
+              <img src={Linkdn} alt="Linkdn" />
+            </a>
+            <a href="whatsapp://send?text=Ola'">
+              <img src={Whatsapp} alt="Whatsapp" />
+            </a>
           </div>
-        ))}
-        <span className="purple">&#125;</span>
-      </S.ProfileInfos>
+        </S.SocialMedia>
+
+        <S.ProfileInfos>
+          <span className="purple">&#123;</span>
+          {profileInfoArray.map((info, index) => (
+            <div key={index} className="info">
+              <span className="magento">{info.info}</span>
+              <span className="magento-light">:</span>
+              <span className="orange">{info.value}</span>
+              <span className="blue">,</span>
+            </div>
+          ))}
+          <span className="purple">&#125;</span>
+        </S.ProfileInfos>
+      </div>
     </S.ContainerAbout>
   );
 };

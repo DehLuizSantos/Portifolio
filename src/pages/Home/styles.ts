@@ -3,11 +3,16 @@ import matrixCode from "../../assets/matrix-code.gif";
 
 export const ContainerHome = styled.div`
   ${({ theme }) => css`
-    padding: 290px 0 50px 0;
     text-align: center;
     height: 100vh;
-
     background-image: url(${matrixCode});
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     .name {
       h1 {
         color: ${theme.colors.lightWhite};
