@@ -6,6 +6,7 @@ import GlobalStyles from "./styles/global";
 import Header from "./template/Header";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Skills from "./pages/Skills";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Header />
           <Home />
           <About />
+          <Skills />
         </Container>
       </ThemeProvider>
     </>
